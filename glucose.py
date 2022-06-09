@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 
 def Function(s,t):
     p1 = 0.023
-    p2 = 0.001
+    p2 = 0.01
     p3 = 0.001
     p4 = 0.005
     p5 = 0.03
     p6 = 0.006
     dgdt = p1 * (s[0] - Gb) - p3*(s[1] - Ib) * s[0] + 0.1
-    didt = (p4*(s[0] - p5)) - p6*(s[1] - Ib) + 0.01
+    didt = (p4*(s[0] - p5)) - p6*(s[1] - Ib) + p2
     return [dgdt, didt]
 
 def main():
